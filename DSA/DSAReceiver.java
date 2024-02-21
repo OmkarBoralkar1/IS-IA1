@@ -23,8 +23,8 @@ public class DSAReceiver {
         PublicKey publicKey = keyFactory.generatePublic(publicKeySpec);
 
         // Create a label to display the message for verification with custom styling
-        Label messageLabel = new Label("verification code is : " + message);
-        messageLabel.setStyle("-fx-font-size:  14px; -fx-font-weight: bold;");
+        Label messageLabel = new Label("Verification code is: " + message);
+        messageLabel.setStyle("-fx-font-size:   14px; -fx-font-weight: bold;");
 
         // Create a text field for the user to enter the original message with custom styling
         TextField originalMessageField = new TextField();
@@ -34,6 +34,14 @@ public class DSAReceiver {
         // Create a verify button with custom styling
         Button verifyButton = new Button("Verify");
         verifyButton.setStyle("-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size:   16px; -fx-font-weight: bold; -fx-border-radius:   5px; -fx-background-radius:   5px;");
+
+        // Create the layout and add the controls with custom styling
+        final VBox[] layout = new VBox[1]; // Use a final one-dimensional array to hold the layout reference
+        layout[0] = new VBox(10);
+        layout[0].setAlignment(Pos.CENTER);
+        layout[0].setStyle("-fx-background-color: #ffffff; -fx-padding:   20px; -fx-border-radius:   10px;");
+        layout[0].getChildren().addAll(messageLabel, originalMessageField, verifyButton);
+
         verifyButton.setOnAction(event -> {
             String originalMessage = originalMessageField.getText();
 
@@ -52,22 +60,19 @@ public class DSAReceiver {
                     });
                 } else {
                     System.out.println("Signature is not valid.");
+                    Label messageLabelerror = new Label("Signature is not valid.");
+                    messageLabelerror.setStyle("-fx-font-size:   14px; -fx-font-weight: bold; -fx-text-fill: #f44336;"); // Red text for error
+                    layout[0].getChildren().add(messageLabelerror); // Add the error label to the layout
                 }
             } catch (Exception e) {
                 e.printStackTrace();
             }
         });
 
-        // Create the layout and add the controls with custom styling
-        VBox layout = new VBox(10);
-        layout.setAlignment(Pos.CENTER);
-        layout.setStyle("-fx-background-color: #ffffff; -fx-padding:   20px; -fx-border-radius:   10px;");
-        layout.getChildren().addAll(messageLabel, originalMessageField, verifyButton);
-
         // Schedule the scene creation and stage setup on the JavaFX Application Thread
         Platform.runLater(() -> {
             // Create the scene and show the stage
-            Scene scene = new Scene(layout,   300,   200);
+            Scene scene = new Scene(layout[0],   300,   200);
             primaryStage.setTitle("Verify Identity");
             primaryStage.setScene(scene);
             primaryStage.show();
