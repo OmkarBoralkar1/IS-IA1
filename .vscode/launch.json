@@ -1,0 +1,80 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "login",
+      "request": "launch",
+      "mainClass": "login",
+      "projectName": "IS IA1 DSA_9f2c6ff2"
+    },
+    {
+      "type": "java",
+      "name": "DSASender2",
+      "request": "launch",
+      "mainClass": "DSASender2",
+      "projectName": "IS IA1 DSA_9f2c6ff2"
+    },
+    {
+      "type": "java",
+      "name": "SimplifiedDSA",
+      "request": "launch",
+      "mainClass": "SimplifiedDSA",
+      "projectName": "IS IA1 DSA_9f2c6ff2"
+    },
+    {
+      "type": "java",
+      "name": "Datasendet1",
+      "request": "launch",
+      "mainClass": "Datasendet1",
+      "projectName": "IS IA1 DSA_9f2c6ff2"
+    },
+    {
+      "type": "java",
+      "name": "DSASender",
+      "request": "launch",
+      "mainClass": "DSASender",
+      "projectName": "IS IA1 DSA_9f2c6ff2"
+    },
+    {
+      "type": "java",
+      "name": "dsab",
+      "request": "launch",
+      "mainClass": "dsab",
+      "projectName": "IS IA1 DSA_9f2c6ff2"
+    },
+    {
+      "type": "java",
+      "name": "dsa",
+      "request": "launch",
+      "mainClass": "dsa",
+      "projectName": "IS IA1 DSA_9f2c6ff2"
+    },
+    {
+      "type": "java",
+      "name": "DSADemo",
+      "request": "launch",
+      "mainClass": "DSADemo",
+      "projectName": "IS IA1 DSA_9f2c6ff2"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/Users/Omkar/OneDrive - somaiya.edu/Desktop/Projects/IS IA1 DSA",
+      "program": "c:/Users/Omkar/OneDrive - somaiya.edu/Desktop/Projects/IS IA1 DSA/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
