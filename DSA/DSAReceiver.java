@@ -23,7 +23,7 @@ public class DSAReceiver {
         PublicKey publicKey = keyFactory.generatePublic(publicKeySpec);
 
         // Create a label to display the message for verification with custom styling
-        Label messageLabel = new Label("Enter the message for verification is: " + message);
+        Label messageLabel = new Label("verification code is : " + message);
         messageLabel.setStyle("-fx-font-size:  14px; -fx-font-weight: bold;");
 
         // Create a text field for the user to enter the original message with custom styling
