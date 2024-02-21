@@ -22,15 +22,18 @@ public class DSAReceiver {
         KeyFactory keyFactory = KeyFactory.getInstance("DSA");
         PublicKey publicKey = keyFactory.generatePublic(publicKeySpec);
 
-        // Create a label to display the message for verification
+        // Create a label to display the message for verification with custom styling
         Label messageLabel = new Label("Enter the message for verification is: " + message);
+        messageLabel.setStyle("-fx-font-size:  14px; -fx-font-weight: bold;");
 
-        // Create a text field for the user to enter the original message
+        // Create a text field for the user to enter the original message with custom styling
         TextField originalMessageField = new TextField();
         originalMessageField.setPromptText("Enter the original message to verify");
+        originalMessageField.setStyle("-fx-background-color: #f0f0f0; -fx-border-color: #c0c0c0; -fx-border-radius:   5px; -fx-padding:   5px;");
 
-        // Create a verify button
+        // Create a verify button with custom styling
         Button verifyButton = new Button("Verify");
+        verifyButton.setStyle("-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size:   16px; -fx-font-weight: bold; -fx-border-radius:   5px; -fx-background-radius:   5px;");
         verifyButton.setOnAction(event -> {
             String originalMessage = originalMessageField.getText();
 
@@ -55,9 +58,10 @@ public class DSAReceiver {
             }
         });
 
-        // Create the layout and add the controls
+        // Create the layout and add the controls with custom styling
         VBox layout = new VBox(10);
         layout.setAlignment(Pos.CENTER);
+        layout.setStyle("-fx-background-color: #ffffff; -fx-padding:   20px; -fx-border-radius:   10px;");
         layout.getChildren().addAll(messageLabel, originalMessageField, verifyButton);
 
         // Schedule the scene creation and stage setup on the JavaFX Application Thread
