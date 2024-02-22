@@ -6,6 +6,13 @@
       "name": "login",
       "request": "launch",
       "mainClass": "login",
+      "projectName": "IS-IA1_30b40353"
+    },
+    {
+      "type": "java",
+      "name": "login",
+      "request": "launch",
+      "mainClass": "login",
       "projectName": "IS IA1 DSA_9f2c6ff2"
     },
     {
@@ -64,8 +71,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Omkar/OneDrive - somaiya.edu/Desktop/Projects/IS IA1 DSA",
-      "program": "c:/Users/Omkar/OneDrive - somaiya.edu/Desktop/Projects/IS IA1 DSA/build/Debug/outDebug",
+      "cwd": ".",
+      "program": "build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

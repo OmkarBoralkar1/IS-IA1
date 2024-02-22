@@ -3,10 +3,9 @@
     {
       "name": "windows-gcc-x64",
       "includePath": [
-        "${workspaceFolder}/**",
-        "C:/OpenSSL-Win64/include" // Replace with the actual path to your OpenSSL include directory
+        "${workspaceFolder}/**"
       ],
-      "compilerPath": "C:/MinGW/bin/gcc.exe", // Replace with the actual path to your GCC executable
+      "compilerPath": "gcc",
       "cStandard": "${default}",
       "cppStandard": "${default}",
       "intelliSenseMode": "windows-gcc-x64",
@@ -15,5 +14,5 @@
       ]
     }
   ],
-  "version":  4
+  "version": 4
 }

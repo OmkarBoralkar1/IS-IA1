@@ -38,7 +38,7 @@ public class DSASender2 {
         String message = scanner.nextLine();
 
         // Sign the message
-        Signature signature = Signature.getInstance("SHA1withDSA", "SUN");
+        Signature signature = Signature.getInstance("SHA256withDSA", "SUN");
 
         signature.initSign(privateKey);
         signature.update(message.getBytes());
